@@ -7,7 +7,7 @@
 ```bash
 docker-compose up -d --build
 ```
-Komutu calistirdiktan sonra 3 adet container ayaklanacak. Sonrasinda "https://localhost:<port>/swagger/index.html" 'a giderek swagger uzerinden endpoint'leri test edebilirsiniz.
+Komutu calistirdiktan sonra 3 adet container ayaklanacak. Sonrasinda "https://localhost:"PORT"/swagger/index.html" 'a giderek swagger uzerinden endpoint'leri test edebilirsiniz.
 
 ## Teknolojiler
 - .Net Core 6 kullanilarak gelistirildi.
