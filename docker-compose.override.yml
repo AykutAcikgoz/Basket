@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  basketdb:
+    container_name: basketdb
+    restart: always
+    ports:
+      - "27017:27017"
+  basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - "MongoConnection:ConnectionString=mongodb://basketdb:27017"
+    depends_on:
+      - basketdb
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ~/.aspnet/https:/root/.aspnet/https:ro
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro

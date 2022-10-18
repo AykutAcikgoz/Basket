@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Basket.Model</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Product\" />
+    <None Remove="MongoDB.Driver" />
+    <None Remove="Basket\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Product\" />
+    <Folder Include="Basket\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Payload\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Product\" />
+    <None Remove="Basket\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Payload\" />
+    <Folder Include="Product\" />
+    <Folder Include="Basket\" />
+  </ItemGroup>
+  <ItemGroup>
+      <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basket.Data\Basket.Data.csproj" />
+    <ProjectReference Include="..\Basket.Model\Basket.Entity.csproj" />
+    <ProjectReference Include="..\Store\Basket.Store.csproj" />
+  </ItemGroup>
+</Project>

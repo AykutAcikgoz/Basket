@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Serilog" />
+    <None Remove="Serilog.Sinks.RollingFile" />
+    <None Remove="HttpLogging\" />
+    <None Remove="Serilog.AspNetCore" />
+    <None Remove="Exception\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="UserCookie\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HttpLogging\" />
+    <Folder Include="BasketException\" />
+    <Folder Include="ClientCookie\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basket.Logger\Basket.Logger.csproj" />
+    <ProjectReference Include="..\Basket.Service\Basket.Service.csproj" />
+  </ItemGroup>
+</Project>
